@@ -1,3 +1,8 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const root = document.documentElement;
 const storageKey = "rolltech-theme";
 
@@ -55,4 +60,15 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   );
 
   revealTargets.forEach((target) => observer.observe(target));
+
+  gsap.to(".hero-image img", {
+    scale: 1.2,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero-image",
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
 }
