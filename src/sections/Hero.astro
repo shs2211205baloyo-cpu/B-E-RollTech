@@ -1,0 +1,144 @@
+---
+---
+
+
+<section class="hero" id="home">
+  <p class="eyebrow">PORTFOLIO</p>
+
+
+  <h1>
+    We make images<br />
+    <span>feel something...</span>
+  </h1>
+
+
+  <div class="hero-bottom">
+    <p>
+      We transform photographs into meaningful visual stories
+      through light, color, detail, and creative vision.
+    </p>
+
+
+    <a href="#work" class="discover">
+      DISCOVER OUR WORK <span>↓</span>
+    </a>
+  </div>
+
+
+  <div class="hero-image">
+    <!-- REPLACE: public/images/hero.jpg -->
+    <img src="https://i.pinimg.com/736x/93/44/6a/93446afafa5c630fdce191dff4c31208.jpg" alt="Featured photo editing work" />
+
+
+    <span class="image-tag">FIG. 001 — VISUAL STUDY</span>
+  </div>
+</section>
+
+
+<style>
+  .hero {
+    padding: 100px 7% 65px;
+  }
+
+
+  h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(65px, 10vw, 145px);
+    line-height: 0.98;
+    letter-spacing: -5px;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+
+
+  h1 span {
+    color: #929089;
+  }
+
+
+  .hero-bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 38px 0 48px;
+  }
+
+
+  .hero-bottom p {
+    font-size: 14px;
+    color: #6b6963;
+    max-width: 390px;
+    line-height: 1.8;
+  }
+
+
+  .discover {
+    font-size: 10px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 10px;
+    white-space: nowrap;
+  }
+
+
+  .discover span {
+    margin-left: 25px;
+  }
+
+
+  .hero-image {
+    position: relative;
+    height: 570px;
+    overflow: hidden;
+    background: #dedbd5;
+  }
+
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    transition: transform 0.7s ease;
+  }
+
+
+  .hero-image:hover img {
+    transform: scale(1.015);
+  }
+
+
+  .image-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+
+  @media (max-width: 768px) {
+    .hero {
+      padding: 80px 5% 50px;
+    }
+
+
+    h1 {
+      font-size: clamp(55px, 13vw, 90px);
+      letter-spacing: -3px;
+    }
+
+
+    .hero-bottom {
+      align-items: start;
+      flex-direction: column;
+    }
+
+
+    .hero-image {
+      height: 420px;
+    }
+  }
+</style>
