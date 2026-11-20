@@ -1,5 +1,8 @@
 ---
-const { title, description } = Astro.props;
+const {
+    title = "RollTech",
+    description = "RollTech is a website from reliable digital experiences of two people facing challenges together.",
+} = Astro.props;
 ---
 <section>
     <h1>{title}</h1>
