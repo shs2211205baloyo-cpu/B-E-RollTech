@@ -1,0 +1,101 @@
+
+---
+const services = [
+  {
+    number: "01",
+    title: "Photo Retouching",
+    description: "Refining details, skin, lighting, and imperfections while keeping images natural.",
+  },
+  {
+    number: "02",
+    title: "Color Grading",
+    description: "Creating moods, tones, and cohesive color palettes for impactful imagery.",
+  },
+  {
+    number: "03",
+    title: "Photo Manipulation",
+    description: "Combining visual elements to create imaginative and artistic compositions.",
+  },
+  
+];
+---
+
+<section class="services section" id="services">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">WHAT WE DO</p>
+      <h2>Our <span>expertise.</span></h2>
+    </div>
+  </div>
+
+  <div class="service-list">
+    {services.map((service) => (
+      <article class="service">
+        <span class="service-number">{service.number}</span>
+        <h3>{service.title}</h3>
+        <p>{service.description}</p>
+        <span class="service-arrow">↗</span>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .service-list {
+    margin-top: 50px;
+    border-top: 1px solid #d4d1ca;
+  }
+
+  .service {
+    display: grid;
+    grid-template-columns: 60px 1.1fr 1.2fr 30px;
+    gap: 20px;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #d4d1ca;
+    transition: padding 0.25s ease;
+  }
+
+  .service:hover {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .service-number,
+  .service-arrow {
+    font-size: 10px;
+    color: #77756f;
+  }
+
+  .service h3 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .service p {
+    color: #77756f;
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 420px;
+  }
+
+  @media (max-width: 768px) {
+    .service {
+      grid-template-columns: 30px 1fr 20px;
+      gap: 12px;
+    }
+
+    .service p {
+      grid-column: 2;
+    }
+
+    .service h3 {
+      font-size: 18px;
+    }
+
+    .service-arrow {
+      grid-column: 3;
+      grid-row: 1;
+    }
+  }
+</style>

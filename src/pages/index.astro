@@ -1,25 +1,160 @@
+
 ---
+import Header from "../components/Header.astro";
 import Hero from "../sections/Hero.astro";
-import About from "../sections/About.astro";
 import Projects from "../sections/Projects.astro";
+import About from "../sections/About.astro";
+import Services from "../sections/Services.astro";
+import Process from "../sections/Process.astro";
 import Contact from "../sections/Contact.astro";
-import Card from "../components/Card.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>RollTech</title>
-	</head>
-	<body>
-		<Card />
-		<Hero />
-		<About />
-		<Projects />
-		<Contact />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B&E RollTech — Photo Editing Studio</title>
+    <meta
+      name="description"
+      content="A creative photo editing portfolio focused on retouching, color grading, and visual storytelling."
+    />
+  </head>
+
+  <body>
+    <Header />
+    <main>
+      <Hero />
+      <Projects />
+      <About />
+      <Services />
+      <Process />
+      <Contact />
+    </main>
+
+    <footer class="footer">
+      <a href="#" class="footer-logo">B&E RollTech<span>.</span></a>
+      <p>IMAGES WITH INTENTION.</p>
+      <span>© 2026 B&E RollTech. CREATIVE STUDIO</span>
+    </footer>
+  </body>
 </html>
+
+<style is:global>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #f4f2ed;
+    color: #222220;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  body, button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #77756f;
+  }
+
+  .section {
+    padding: 120px 7%;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 55px;
+  }
+
+  .section-heading h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(50px, 7vw, 95px);
+    font-weight: 500;
+    letter-spacing: -5px;
+    line-height: 1;
+    margin-top: 25px;
+  }
+
+  .section-heading h2 span,
+  .accent {
+    color: #929089;
+  }
+
+  .section-note {
+    color: #77756f;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .footer {
+    border-top: 1px solid #d9d6cf;
+    padding: 30px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: -1.5px;
+  }
+
+  .footer-logo span {
+    color: #929089;
+  }
+
+  .footer p,
+  .footer > span {
+    font-size: 9px;
+    color: #77756f;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      padding: 85px 5%;
+    }
+
+    .section-heading {
+      flex-direction: column;
+      align-items: start;
+      gap: 22px;
+    }
+
+    .section-heading h2 {
+      letter-spacing: -3px;
+    }
+
+    .footer {
+      flex-wrap: wrap;
+      padding: 25px 5%;
+    }
+  }
+</style>

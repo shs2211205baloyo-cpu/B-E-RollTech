@@ -1,0 +1,91 @@
+---
+---
+
+<header class="navbar">
+    <a href="#home" class="logo">
+        B&E RollTech<span>.</span>
+    </a>
+
+    <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#projects">PROJECTS ↗</a>
+        <a href="#contact">CONTACT ↗</a>
+    </nav>
+
+    <span class="nav-label">PHOTO EDITORS / 2026</span>
+</header>
+
+<style>
+    .navbar {
+        height: 82px;
+        padding: 0 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #d9d6cf;
+    }
+
+    .logo {
+        font-family: "Manrope", sans-serif;
+        font-weight: 800;
+        font-size: 26px;
+        letter-spacing: -1.8px;
+    }
+
+    .logo span {
+        color: #929089;
+    }
+
+    nav {
+        display: flex;
+        gap: 32px;
+    }
+
+    nav a,
+    .nav-label {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    nav a {
+        transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+        opacity: 0.45;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            height: 70px;
+            padding: 0 5%;
+        }
+
+        nav {
+            gap: 14px;
+        }
+
+        nav a {
+            font-size: 9px;
+        }
+
+        .nav-label {
+            display: none;
+        }
+    }
+
+    @media (max-width: 420px) {
+        nav {
+            gap: 9px;
+        }
+
+        nav a {
+            font-size: 8px;
+        }
+
+        .logo {
+            font-size: 22px;
+        }
+    }
+</style>

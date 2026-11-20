@@ -1,0 +1,91 @@
+
+---
+---
+
+<section class="process section" id="process">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">BEHIND THE IMAGE</p>
+      <h2>From raw to <span>refined.</span></h2>
+    </div>
+
+    <p class="section-note">
+      Every detail matters.<br />
+      Every adjustment has purpose.
+    </p>
+  </div>
+
+  <div class="comparison">
+    <div class="comparison-image">
+      <!-- REPLACE: public/images/before.jpg -->
+      <img src="/images/before.jpg" alt="Original photograph before editing" loading="lazy" />
+      <span class="comparison-label">01 — BEFORE</span>
+    </div>
+
+    <div class="comparison-image">
+      <!-- REPLACE: public/images/after.jpg -->
+      <img src="/images/after.jpg" alt="Final edited photograph" loading="lazy" />
+      <span class="comparison-label">02 — AFTER</span>
+    </div>
+  </div>
+
+  <p class="comparison-caption">
+    LIGHT · COLOR · DETAIL · ATMOSPHERE
+  </p>
+</section>
+
+<style>
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .comparison-image {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    background: #dfdcd6;
+  }
+
+  .comparison-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .comparison-label {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    background: #f4f2ed;
+    padding: 12px 16px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .comparison-caption {
+    text-align: right;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #77756f;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .comparison {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .comparison-image {
+      height: 450px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .comparison-image {
+      height: 350px;
+    }
+  }
+</style>
