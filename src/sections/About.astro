@@ -1,0 +1,116 @@
+---
+---
+
+<section class="about section" id="about">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">THE STUDIO</p>
+      <h2>Two perspectives.<br /><span>One vision.</span></h2>
+    </div>
+
+    <p class="section-note">
+      B&E RollTech brings photography, editing, and technology<br />
+      together through thoughtful visual work.
+    </p>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-image">
+      <img
+        src="https://i.pinimg.com/736x/cd/a7/5a/cda75a26b8f2f2fc9b07f08bdd321657.jpg"
+        alt="Creative studio workspace"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="about-copy">
+      <p class="about-lead">
+        We are a creative duo turning simple ideas and raw concepts into
+        considered immaculate reality.
+      </p>
+
+      <p>
+        Our approach combines visual sensitivity with technical precision.
+        We explore composition, atmosphere, and detail while using modern
+        digital tools to give every ideas and concepts clarity and purpose.
+      </p>
+
+      <div class="about-details">
+        <div>
+          <span>FOCUS</span>
+          <p>UX/UI <br />Photo editing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 7%;
+    align-items: center;
+  }
+
+  .about-image {
+    height: 520px;
+    overflow: hidden;
+    background: #dedbd5;
+  }
+
+  .about-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-copy {
+    max-width: 620px;
+  }
+
+  .about-copy > p {
+    color: #77756f;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .about-copy .about-lead {
+    color: #222220;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1.25;
+    letter-spacing: -1.5px;
+    margin-bottom: 28px;
+  }
+
+  .about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #d4d1ca;
+    margin-top: 40px;
+    padding-top: 22px;
+  }
+
+  .about-details span {
+    color: #929089;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .about-details p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .about-image {
+      height: 420px;
+    }
+  }
+</style>

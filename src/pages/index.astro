@@ -7,6 +7,7 @@ import About from "../sections/About.astro";
 import Services from "../sections/Services.astro";
 import Process from "../sections/Process.astro";
 import Contact from "../sections/Contact.astro";
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -36,6 +37,7 @@ import Contact from "../sections/Contact.astro";
       <p>IMAGES WITH INTENTION.</p>
       <span>© 2026 B&E RollTech. CREATIVE STUDIO</span>
     </footer>
+    <script src="../scripts/animations.js"></script>
   </body>
 </html>
 
@@ -53,8 +55,8 @@ import Contact from "../sections/Contact.astro";
   }
 
   body {
-    background: #f4f2ed;
-    color: #222220;
+    background: var(--background);
+    color: var(--text);
     font-family: 'DM Sans', sans-serif;
   }
 
@@ -75,7 +77,7 @@ import Contact from "../sections/Contact.astro";
   .eyebrow {
     font-size: 10px;
     letter-spacing: 2px;
-    color: #77756f;
+    color: var(--muted);
   }
 
   .section {
@@ -101,17 +103,17 @@ import Contact from "../sections/Contact.astro";
 
   .section-heading h2 span,
   .accent {
-    color: #929089;
+    color: var(--accent);
   }
 
   .section-note {
-    color: #77756f;
+    color: var(--muted);
     font-size: 12px;
     line-height: 1.8;
   }
 
   .footer {
-    border-top: 1px solid #d9d6cf;
+    border-top: 1px solid var(--border);
     padding: 30px 7%;
     display: flex;
     justify-content: space-between;
@@ -127,13 +129,13 @@ import Contact from "../sections/Contact.astro";
   }
 
   .footer-logo span {
-    color: #929089;
+    color: var(--accent);
   }
 
   .footer p,
   .footer > span {
     font-size: 9px;
-    color: #77756f;
+    color: var(--muted);
     letter-spacing: 1px;
   }
 

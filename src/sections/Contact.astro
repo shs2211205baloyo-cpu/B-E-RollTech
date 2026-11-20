@@ -1,0 +1,114 @@
+---
+---
+
+<section class="contact section" id="contact">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2>Start a <span>conversation.</span></h2>
+    </div>
+  </div>
+
+  <div class="contact-grid">
+    <p class="contact-lead">
+      Have a photograph to enhance, a visual idea to develop, or a creative
+      project in mind? We would be glad to hear about it.
+    </p>
+
+    <div class="contact-links">
+      <a href="mailto:hello@berolltech.com" class="contact-link">
+        <span>EMAIL</span>
+        <strong>B&ERollTech@gmail.com</strong>
+        <b>↗</b>
+      </a>
+
+      <a href="#projects" class="contact-link">
+        <span>PORTFOLIO</span>
+        <strong>View selected work</strong>
+        <b>↗</b>
+      </a>
+
+      <a href="#home" class="contact-link">
+        <span>BACK TO TOP</span>
+        <strong>RollTech studio</strong>
+        <b>↑</b>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    border-top: 1px solid #d9d6cf;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 8%;
+  }
+
+  .contact-lead {
+    max-width: 430px;
+    color: #77756f;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .contact-links {
+    border-top: 1px solid #d4d1ca;
+  }
+
+  .contact-link {
+    display: grid;
+    grid-template-columns: 130px 1fr 20px;
+    align-items: center;
+    gap: 20px;
+    min-height: 82px;
+    border-bottom: 1px solid #d4d1ca;
+    transition: padding 0.25s ease, opacity 0.25s ease;
+  }
+
+  .contact-link:hover {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .contact-link span,
+  .contact-link b {
+    color: #77756f;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .contact-link strong {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .contact-link b {
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .contact-link {
+      grid-template-columns: 100px 1fr 20px;
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .contact-link {
+      grid-template-columns: 85px 1fr 16px;
+    }
+
+    .contact-link strong {
+      font-size: 12px;
+    }
+  }
+</style>

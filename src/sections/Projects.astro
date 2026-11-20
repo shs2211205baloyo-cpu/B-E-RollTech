@@ -1,0 +1,142 @@
+---
+const projects = [
+  {
+    number: "01",
+    title: "FRONT-END DEVELOPER",
+    type: "01.",
+    image: "https://i.pinimg.com/736x/c4/aa/72/c4aa728867cab898ae4ac7c184338b73.jpg",
+  },
+  {
+    number: "02",
+    title: "TOOLS",
+    type: "02.",
+    image: "https://i.pinimg.com/736x/c0/56/7a/c0567adeb183e0023a6fcd58072b9200.jpg",
+  },
+  {
+    number: "03",
+    title: "EDITING PROJECT",
+    type: "03.",
+    image: "https://i.pinimg.com/736x/96/e4/de/96e4deb91e155d8ee57e85f54f199d59.jpg",
+  },
+];
+---
+
+<section class="projects section" id="projects">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">SELECTED WORK</p>
+      <h2>Our <span>projects.</span></h2>
+    </div>
+
+    <p class="section-note">
+      A concise selection of editing studies,<br />
+      visual concepts, and creative experiments.
+    </p>
+  </div>
+
+  <div class="project-grid">
+    {projects.map((project) => (
+      <article class="project">
+        <div class="project-image">
+          <img src={project.image} alt={project.title} loading="lazy" />
+          <span>{project.number}</span>
+        </div>
+        <div class="project-meta">
+          <h3>{project.title}</h3>
+          <p>{project.type}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+
+  .project:nth-child(1) {
+    grid-column: span 7;
+  }
+
+  .project:nth-child(2) {
+    grid-column: span 5;
+    margin-top: 90px;
+  }
+
+  .project:nth-child(3) {
+    grid-column: 4 / span 7;
+    margin-top: 20px;
+  }
+
+  .project-image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: #dedbd5;
+  }
+
+  .project:nth-child(2) .project-image {
+    height: 410px;
+  }
+
+  .project:nth-child(3) .project-image {
+    height: 520px;
+  }
+
+  .project-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .project:hover .project-image img {
+    transform: scale(1.015);
+  }
+
+  .project-image > span {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .project-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 16px;
+  }
+
+  .project-meta h3 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .project-meta p {
+    color: #77756f;
+    font-size: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .project:nth-child(n) {
+      grid-column: 1;
+      margin-top: 0;
+    }
+
+    .project-image,
+    .project:nth-child(n) .project-image {
+      height: 420px;
+    }
+  }
+</style>

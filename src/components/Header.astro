@@ -3,7 +3,8 @@
 
 <header class="navbar">
     <a href="#home" class="logo">
-        B&E RollTech<span>.</span>
+        <img src="/rolltech-logo.png" alt="B&E RollTech" />
+        <span class="brand-name">B&amp;E <strong>RollTech</strong></span>
     </a>
 
     <nav>
@@ -13,7 +14,10 @@
         <a href="#contact">CONTACT ↗</a>
     </nav>
 
-    <span class="nav-label">PHOTO EDITORS / 2026</span>
+    <div class="nav-actions">
+        <span class="nav-label">PHOTO EDITORS / 2026</span>
+        <button class="theme-toggle" type="button" aria-label="Switch theme">☾</button>
+    </div>
 </header>
 
 <style>
@@ -23,18 +27,39 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid #d9d6cf;
+        border-bottom: 1px solid var(--border);
     }
 
     .logo {
-        font-family: "Manrope", sans-serif;
-        font-weight: 800;
-        font-size: 26px;
-        letter-spacing: -1.8px;
+        display: flex;
+        align-items: center;
+        height: 54px;
+        flex: 0 0 auto;
+        gap: 10px;
     }
 
-    .logo span {
-        color: #929089;
+    .logo img {
+        height: 54px;
+        width: auto;
+        max-width: 180px;
+        object-fit: contain;
+    }
+
+    .brand-name {
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: -1px;
+        white-space: nowrap;
+        color: var(--text);
+    }
+
+    .brand-name strong {
+        font-weight: 800;
+    }
+
+    :global(:root[data-theme="dark"]) .logo img {
+        filter: brightness(1.55) contrast(1.12);
     }
 
     nav {
@@ -50,6 +75,12 @@
 
     nav a {
         transition: opacity 0.2s ease;
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
 
     nav a:hover {
@@ -70,6 +101,10 @@
             font-size: 9px;
         }
 
+        .brand-name {
+            display: none;
+        }
+
         .nav-label {
             display: none;
         }
@@ -84,8 +119,9 @@
             font-size: 8px;
         }
 
-        .logo {
-            font-size: 22px;
+        .logo,
+        .logo img {
+            height: 44px;
         }
     }
 </style>

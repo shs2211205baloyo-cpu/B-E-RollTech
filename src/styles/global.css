@@ -1,0 +1,244 @@
+:root {
+    --background: #f4f2ed;
+    --surface: #ebe8e1;
+    --text: #222220;
+    --muted: #77756f;
+    --accent: #929089;
+    --border: #d9d6cf;
+    --border-strong: #d4d1ca;
+    --tag-background: #f4f2ed;
+    --tag-text: #222220;
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    --background: #1c1c1a;
+    --surface: #292926;
+    --text: #f1efe8;
+    --muted: #aaa79f;
+    --accent: #b2afa6;
+    --border: #3a3a36;
+    --border-strong: #454540;
+    --tag-background: #1c1c1a;
+    --tag-text: #f1efe8;
+    color-scheme: dark;
+}
+
+html {
+    background: var(--background);
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+.navbar,
+.footer,
+.service-list,
+.service,
+.about-details,
+.contact,
+.contact-links,
+.contact-link,
+.comparison-label,
+.comparison-caption {
+    transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease;
+}
+
+.navbar,
+.footer,
+.contact {
+    border-color: var(--border);
+}
+
+.service-list,
+.service,
+.about-details,
+.contact-links,
+.contact-link {
+    border-color: var(--border-strong);
+}
+
+.eyebrow,
+.section-note,
+.footer p,
+.footer>span,
+.service-number,
+.service-arrow,
+.service p,
+.project-meta p,
+.contact-lead,
+.contact-link span,
+.contact-link b,
+.comparison-caption,
+.about-copy>p,
+.hero-bottom p {
+    color: var(--muted);
+}
+
+.section-heading h2 span,
+.accent,
+.footer-logo span,
+.logo span,
+.about-details span {
+    color: var(--accent);
+}
+
+.comparison-label,
+.comparison-caption,
+.project-image,
+.about-image,
+.hero-image,
+.comparison-image {
+    background: var(--surface);
+}
+
+.comparison-label {
+    background: var(--tag-background);
+    color: var(--tag-text);
+}
+
+.theme-toggle {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    display: inline-grid;
+    place-items: center;
+    font-size: 13px;
+    transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--surface);
+    transform: rotate(8deg);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    body,
+    .reveal,
+    .theme-toggle {
+        transition: none;
+    }
+}
+
+:root[data-theme="dark"] .navbar,
+:root[data-theme="dark"] .footer,
+:root[data-theme="dark"] .contact,
+:root[data-theme="dark"] .service,
+:root[data-theme="dark"] .service-list,
+:root[data-theme="dark"] .contact-links,
+:root[data-theme="dark"] .contact-link,
+:root[data-theme="dark"] .about-details {
+    border-color: var(--border);
+}
+
+:root[data-theme="dark"] .project-image,
+:root[data-theme="dark"] .about-image,
+:root[data-theme="dark"] .hero-image,
+:root[data-theme="dark"] .comparison-image {
+    background: var(--surface);
+}
+
+body,
+.navbar,
+.footer,
+.hero,
+.projects,
+.about,
+.services,
+.process,
+.contact,
+.section {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.navbar,
+.footer,
+.contact,
+.service-list,
+.service,
+.about-details,
+.contact-links,
+.contact-link {
+    border-color: var(--border);
+}
+
+.eyebrow,
+.section-note,
+.footer p,
+.footer > span,
+.hero-bottom p,
+.service-number,
+.service-arrow,
+.service p,
+.project-meta p,
+.about-copy > p,
+.about-lead,
+.contact-lead,
+.contact-link span,
+.contact-link b,
+.comparison-caption {
+    color: var(--muted);
+}
+
+.section-heading h2,
+.section-heading h2 span,
+.footer-logo,
+.brand-name,
+.project-meta h3,
+.service h3,
+.contact-link strong,
+.about-lead,
+.about-copy,
+.discover,
+.comparison-label {
+    color: var(--text);
+}
+
+.section-heading h2 span,
+.footer-logo span,
+.about-details span,
+.accent,
+.logo span {
+    color: var(--accent);
+}
+
+.hero-image,
+.about-image,
+.project-image,
+.comparison-image,
+.comparison-label,
+.comparison-label {
+    background: var(--surface);
+}
+
+.comparison-label {
+    color: var(--tag-text);
+}
+
+.discover {
+    border-bottom-color: var(--text);
+}
